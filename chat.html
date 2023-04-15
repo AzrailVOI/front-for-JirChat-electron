@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЇR chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/bootstrap.min.css" >
+    <link rel="stylesheet" href="styles/chat.css">
+</head>
+<body>
+<div class="container">
+  <header class="row header flex-j-c-all">
+  <div class="header-menu row col-3 ">
+    <div class="col-10">
+      <div class="header-menu-private-messages">
+        <button class="header-menu-btn private-messages-btn chat-btn">
+          Private Messages
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="header-menu row col-3 ">
+    <div class="col-10">
+      <div class="header-menu-my-profile row">
+        <div class="header-menu-my-profile-logo col-3">
+          <img src="images/userlogo.webp" alt="user's logo" class="header-menu-my-profile-logo-image">
+        </div>
+        <div class="header-menu-my-profile-title col-9">
+          <span class="header-menu-my-profile-title" id="header-menu-my-profile-title">
+            Władysław Owczaruk Illicz
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-menu row col-1 ">
+    <div class="header-menu-user-profile">
+      <button class="header-menu-btn user-profile-btn chat-btn">
+        My Profile
+      </button>
+    </div>
+  </div>
+  <div class="header-menu row col-1 ">
+    <div class="header-menu-app-settings">
+      <button class="header-menu-btn app-settings-btn chat-btn">
+        Settings
+      </button>
+    </div>
+  </div>
+  <div class="header-menu row col-1 ">
+    <div class="header-menu-logout">
+      <button class="header-menu-btn logout-btn chat-btn">
+        Log Out
+      </button>
+    </div>
+  </div>
+  <div class="header-menu row col-1 ">
+    <div class="language">
+      <select name="appLang" id="appLang" class="language-select chat-select">
+        <option value="uk">Ukrainian</option>
+        <option value="en">English</option>
+        <option value="ru">Russian</option>
+      </select>
+    </div>
+  </div>
+  <div class="header-menu row col-2 "></div>
+</header>
+</div>
+
+<div class="container">
+  <main class="main row">
+    <div class="col-3 row flex-j-c-all main-chats">
+      <div class="col-10 main-chats-search row">
+        <div class="main-chats-search-buttonDiv">
+          <input type="text" class="main-chats-search-buttonDiv-btn chat-btn" placeholder="Chat Search">
+        </div>
+      </div>
+    </div>
+    <div class="col-7 row main-chatarea ">
+      <div class="main-chatarea-messages">
+
+      </div>
+      <form class="main-chatarea-textarea">
+<!--        <textarea name="message" id="message" class="main-chatarea-textarea-text" placeholder="Введите сообщение..."></textarea>-->
+        <div class="main-chatarea-textarea-outdiv">
+
+            <div class="main-chatarea-textarea-placeholder">
+              Type a text
+            </div>
+            <div class="main-chatarea-textarea-outtext">
+              <div class="main-chatarea-textarea-outtext-element">
+                <span class="main-chatarea-textarea-outtext-element-text" contenteditable="true"></span>
+              </div>
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-2 row main-users "></div>
+  </main>
+</div>
+
+
+
+
+
+<footer class="footer"></footer>
+
+
+<script src="js/socket.io.js"></script>
+<script src="js/chat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
