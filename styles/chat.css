@@ -2,6 +2,20 @@
 * {
   font-family: PT Sans;
   font-weight: 400;
+  scrollbar-width: thin;
+  scrollbar-color: #4000c3 #1b1b23;
+}
+*::-webkit-scrollbar {
+  width: 0.6rem;
+}
+*::-webkit-scrollbar-track {
+  background: #1b1b23;
+  border-radius: 0.3rem;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #4000c3;
+  border-radius: 20px;
+  border: 3px solid #1b1b23;
 }
 
 body {
@@ -34,6 +48,10 @@ body {
 .flex-a-c-all * {
   display: flex;
   align-items: center;
+}
+
+.color-l-black {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .chat-btn {
@@ -86,6 +104,10 @@ body {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+.header-menu-logout button {
+  background: #820000;
+  border-color: #820000;
+}
 .header-menu-my-profile {
   display: flex;
   justify-content: center;
@@ -116,17 +138,37 @@ body {
   align-items: flex-end !important;
 }
 .main-chatarea-messages {
-  background: red;
-  display: flex;
-  align-items: flex-end;
-  background: rgba(0, 0, 0, 0.25);
+  align-items: center;
+  justify-content: flex-end;
+  background: #1b1b23;
   border-radius: 0.5rem;
-  height: 70vh;
+  height: 75vh;
   margin-bottom: 1rem;
+  overflow: auto;
+  text-align: center;
+}
+.main-chatarea-messages-item {
+  display: inline-block !important;
+  width: 80%;
+  background: #000;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-align: left;
+}
+.main-chatarea-messages .me {
+  margin-left: 7rem;
+  border-radius: 0.6rem 0.1rem 0.6rem 0.6rem;
+  background: #4000c3;
+}
+.main-chatarea-messages .some {
+  margin-right: 7rem;
+  border-radius: 0.1rem 0.6rem 0.6rem 0.6rem;
 }
 .main-chatarea-textarea-outdiv {
   width: 100%;
-  height: 2.5rem;
+  height: 1rem;
   resize: none;
   border: none;
   background: #cbcbcb;
@@ -138,7 +180,7 @@ body {
 }
 .main-chatarea-textarea-placeholder {
   display: none;
-  color: rgba(0, 0, 0, 0.25);
+  color: #1b1b23;
   z-index: 3;
   width: 100%;
 }
@@ -146,13 +188,28 @@ body {
   display: block;
   width: 100%;
 }
+.main-chatarea-textarea-outtext-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-chatarea-textarea-outtext-element i {
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+.main-chatarea-textarea-outtext-element i:hover {
+  color: #4000c3;
+}
 .main-chatarea-textarea-outtext-element-text {
-  max-height: 5rem;
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  word-break: break-all !important;
-  overflow-y: auto;
+  display: block;
+  width: 90%;
+  outline: none;
+  cursor: text;
+  color: #000000;
+}
+.main-chatarea-textarea-outtext-element-text:empty:before {
+  content: "Type a message...";
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .footer {

@@ -1,11 +1,12 @@
 {
   "name": "front-for-JirChat",
   "version": "1.0.0",
-  "main":"main.js",
+  "main": "main.js",
   "scripts": {
     "electron-dev": "electron ."
   },
   "dependencies": {
+    "autosize": "^6.0.1",
     "electron": "^24.1.2"
   }
 }

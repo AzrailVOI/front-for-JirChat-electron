@@ -1,5 +1,5 @@
-const socket = io("http://192.168.43.247:3000/");
-
+const socket = io("http://192.168.3.6:3000/");
+// const { shell } = require('electron');
 socket.on('connect', () => {
   console.log('connected');
 });
@@ -23,5 +23,5 @@ socket.on('apo', mess=>{
     console.log(mess)
 })
 socket.on('authFormServer', status=>{
-    status ? window.location.replace("/chat.html") : console.log('Error')
+    status ? window.location.href = "chat.html" : console.log('Error')
 })
