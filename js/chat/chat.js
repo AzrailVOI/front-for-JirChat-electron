@@ -1,4 +1,4 @@
-const socket = io("http://192.168.3.6:3000/");
+const socket = io("http://192.168.3.6:5000/");
 const $sendBtn = document.getElementById('send')
 const $smileBtn = document.getElementById('smile')
 const textmess = document.getElementById('type-mess')
@@ -21,7 +21,7 @@ return `
 
 function sendMessage() {
   console.log(user_ID)
-  let message_text = textmess.innerHTML
+  let message_text = textmess.innerText
   if (message_text !== ''){
     console.log(message_text)
     chat.insertAdjacentHTML("beforeend", renderMessage('me', message_text))
@@ -29,6 +29,9 @@ function sendMessage() {
     socket.emit('user-message', message_text)
   }
   textmess.innerHTML = ''
+  const currentHeight = textmess.offsetHeight;
+  textmessarea.style.height = previousHeightArea + currentHeight + "px";
+  messarea.style.height = messareaH - currentHeight + "px";
 }
 
 

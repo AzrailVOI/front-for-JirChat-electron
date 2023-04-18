@@ -156,6 +156,7 @@ body {
   padding: 0.5rem 1rem;
   color: #ffffff;
   text-align: left;
+  word-wrap: break-word;
 }
 .main-chatarea-messages .me {
   margin-left: 7rem;

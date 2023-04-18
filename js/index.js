@@ -1,4 +1,4 @@
-const socket = io("http://192.168.3.6:3000/");
+const socket = io("http://192.168.3.6:5000/");
 // const { shell } = require('electron');
 socket.on('connect', () => {
   console.log('connected');
